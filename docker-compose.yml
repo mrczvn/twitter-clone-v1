@@ -1,0 +1,13 @@
+version: 3.7
+
+services:
+  db:
+    image: postgres
+    container_name: twitter_clone
+    restart: always
+    ports:
+      - ${DB_PORT}:5432
+    environment:
+      POSTGRES_PASSWORD: ${DB_PWD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
